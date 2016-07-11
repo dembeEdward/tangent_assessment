@@ -1,0 +1,12 @@
+{
+  "name": "Pivotal-angular",
+  "version": "1.0.0",
+  "Author": "Dembe Edward Tshifaro",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^2.2.4",
+    "express": "~4.9.0",
+    "jquery": "^3.1.0"
+  }
+}
