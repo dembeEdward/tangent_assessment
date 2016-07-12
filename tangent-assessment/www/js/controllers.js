@@ -2,27 +2,23 @@ var app = angular.module('controllers', []);
 //home state controller
 app.controller('homeCtrl', function($scope, currentIteration){
 
-
-
   var iterationScope = "current";
-  var iteration = null;
   $scope.categories = {};
   $scope.categories.planned = [];
   $scope.categories.inProgress = [];
   $scope.categories.test = [];
   $scope.categories.done = [];
   $scope.showError = false;
-  $scope.error = "Can not get the current iteration right now. Please try again later.";
 
   var showModal = function(){
     $('#loadingModal').modal('show');
-  }
-
-  var hideModal = function(){
-    $('#loadingModal').modal('hide')
   };
 
-  var determineCategories = function(stories){
+  var hideModal = function(){
+    $('#loadingModal').modal('hide');
+  };
+
+  $scope.determineCategories = function(stories){
 
     if(stories.length > 0){
 
@@ -40,29 +36,31 @@ app.controller('homeCtrl', function($scope, currentIteration){
     }
   };
 
-  var setIterationNumber = function(number){
+  $scope.setIterationNumber = function(number){
     $scope.iterationNumber = number;
   };
 
-  var setIteration= function(data){
-    iteration = data;
+  $scope.setIteration = function(data){
+    $scope.iteration = data;
   };
-  //show modal
-  showModal();
+
   //get the current iteration
   currentIteration.getCurrentIteration(iterationScope).then(function(iterationData){
+    //show modal
+      showModal();
       //set Iteration
-      setIteration(iterationData.data[0]);
+      $scope.setIteration(iterationData.data[0]);
       //set iterationNumber
-      setIterationNumber(iteration.number);
+      $scope.setIterationNumber($scope.iteration.number);
       //group the iteration stories into categories
-      determineCategories(iteration.stories);
+      $scope.determineCategories($scope.iteration.stories);
       //hide modal when data is loaded
       hideModal();
   })
-  //handle error 404
+  //handle error
   .catch(function(){
     $scope.showError = true;
+    $scope.error = "Can not get the current iteration right now. Please try again later.";
   });
 
 });

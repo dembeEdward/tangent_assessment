@@ -2,29 +2,57 @@ describe('Pivotal-angular', function(){
 
   beforeEach(function(){
     module('pivotalAngular');
-    //module('services');
-    //module('controllers');
-    //module('services');
   });
+
+  var $scope;
+  var $q;
+  var deferred;
   var currentIteration;
+  var $controller;
+  var createController;
 
   beforeEach(inject(function($injector){
+    // exception for UI router
+    $httpBackend = $injector.get('$httpBackend');
+    $httpBackend.expectGET("templates/home.html").respond();
+    //get currentIteration service
     currentIteration = $injector.get('currentIteration');
+    //get the controller
+    $controller = $injector.get('$controller');
+    //get the root scope
     $rootScope = $injector.get('$rootScope');
+    $scope = $rootScope.$new();
+    // $q service to create a mock instance of defer
+    $q = $injector.get('$q');
+    deferred = $q.defer();
+    // return the deferred promise
+    spyOn(currentIteration, 'getCurrentIteration').and.returnValue(deferred.promise);
+    //set scope to homeCtrl scope
+    createController = function() {
+       return $controller('homeCtrl', {'$scope' :$scope });
+     };
+
   }));
 
-  it('currentIteration service should be defined', function(){
-      expect(currentIteration).toBeDefined();
-  });
+    it('should be able to set iteration number', function(){
+      createController();
+      $scope.setIterationNumber(1);
+      expect($scope.iterationNumber).not.toBe(undefined);
+      expect($scope.iterationNumber).toBe(1);
+    });
 
-  it('currentIteration service should be working', function(){
-    var scope = "current";
-    //should not return a null when scope is current
-    expect(currentIteration.getCurrentIteration(scope)).not.toBe(null);
-    console.log(currentIteration.getCurrentIteration("soso"));
-    //should not return a status 200 scope is current
-    //expect(currentIteration.getCurrentIteration(scope).status).toBe(200);
+    it('should be able to set iteration', function(){
 
-  });
+      var data = ["test", "this", "array"];
+      createController();
+      $scope.setIteration(data);
+      expect($scope.iteration).not.toBe(undefined);
+      expect($scope.iteration).toBe(data);
+      expect($scope.iteration.length).toBeGreaterThan(0);
+    });
+
+    it('should be able to determine categories', function(){
+      
+    });
 
 });
