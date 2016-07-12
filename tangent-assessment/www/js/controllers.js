@@ -12,6 +12,7 @@ app.controller('homeCtrl', function($scope, currentIteration){
   $scope.categories.test = [];
   $scope.categories.done = [];
   $scope.showError = false;
+  $scope.error = "Can not get the current iteration right now. Please try again later.";
 
   var showModal = function(){
     $('#loadingModal').modal('show');
