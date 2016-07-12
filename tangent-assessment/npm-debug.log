@@ -1,0 +1,286 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'update' ]
+2 info using npm@1.4.9
+3 info using node@v6.2.0
+4 verbose url raw angular
+5 verbose url resolving [ 'https://registry.npmjs.org/', './angular' ]
+6 verbose url resolved https://registry.npmjs.org/angular
+7 info trying registry request attempt 1 at 10:29:07 PM
+8 verbose etag "3QT1K6SEJMB71P2B1MQO0CKGB"
+9 http GET https://registry.npmjs.org/angular
+10 verbose url raw angular-ui-router
+11 verbose url resolving [ 'https://registry.npmjs.org/', './angular-ui-router' ]
+12 verbose url resolved https://registry.npmjs.org/angular-ui-router
+13 info trying registry request attempt 1 at 10:29:07 PM
+14 verbose etag "C77COF9P0WECWYGGPFWSQO6DE"
+15 http GET https://registry.npmjs.org/angular-ui-router
+16 verbose url raw bootstrap
+17 verbose url resolving [ 'https://registry.npmjs.org/', './bootstrap' ]
+18 verbose url resolved https://registry.npmjs.org/bootstrap
+19 info trying registry request attempt 1 at 10:29:07 PM
+20 verbose etag "5K8L3AUR83IZHYZWB9BVVANDA"
+21 http GET https://registry.npmjs.org/bootstrap
+22 verbose url raw angular-mocks
+23 verbose url resolving [ 'https://registry.npmjs.org/', './angular-mocks' ]
+24 verbose url resolved https://registry.npmjs.org/angular-mocks
+25 info trying registry request attempt 1 at 10:29:07 PM
+26 verbose etag "65QJBJ9KDK9RJMRBL23FLC80B"
+27 http GET https://registry.npmjs.org/angular-mocks
+28 verbose url raw jasmine
+29 verbose url resolving [ 'https://registry.npmjs.org/', './jasmine' ]
+30 verbose url resolved https://registry.npmjs.org/jasmine
+31 info trying registry request attempt 1 at 10:29:07 PM
+32 verbose etag "226GLD8L8DVIBHNNKR0FAJ2BP"
+33 http GET https://registry.npmjs.org/jasmine
+34 verbose url raw karma-jasmine
+35 verbose url resolving [ 'https://registry.npmjs.org/', './karma-jasmine' ]
+36 verbose url resolved https://registry.npmjs.org/karma-jasmine
+37 info trying registry request attempt 1 at 10:29:07 PM
+38 verbose etag "5O6GLXZCLLDRULIJW4GMCCXQ9"
+39 http GET https://registry.npmjs.org/karma-jasmine
+40 verbose url raw express
+41 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+42 verbose url resolved https://registry.npmjs.org/express
+43 info trying registry request attempt 1 at 10:29:07 PM
+44 verbose etag "CNMW77J5L9JM8ZMTXDPQNI43Q"
+45 http GET https://registry.npmjs.org/express
+46 verbose url raw karma-chrome-launcher
+47 verbose url resolving [ 'https://registry.npmjs.org/', './karma-chrome-launcher' ]
+48 verbose url resolved https://registry.npmjs.org/karma-chrome-launcher
+49 info trying registry request attempt 1 at 10:29:07 PM
+50 verbose etag "DOZUX38YGKISCAN9WX7OX1SAU"
+51 http GET https://registry.npmjs.org/karma-chrome-launcher
+52 verbose url raw karma
+53 verbose url resolving [ 'https://registry.npmjs.org/', './karma' ]
+54 verbose url resolved https://registry.npmjs.org/karma
+55 info trying registry request attempt 1 at 10:29:08 PM
+56 verbose etag "OIR0RAWADG0VV1YPUKELUFYF"
+57 http GET https://registry.npmjs.org/karma
+58 http 304 https://registry.npmjs.org/karma-jasmine
+59 silly registry.get cb [ 304,
+59 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:08 GMT',
+59 silly registry.get     via: '1.1 varnish',
+59 silly registry.get     'cache-control': 'max-age=300',
+59 silly registry.get     etag: '"5O6GLXZCLLDRULIJW4GMCCXQ9"',
+59 silly registry.get     age: '291',
+59 silly registry.get     connection: 'close',
+59 silly registry.get     'x-served-by': 'cache-lcy1131-LCY',
+59 silly registry.get     'x-cache': 'HIT',
+59 silly registry.get     'x-cache-hits': '4',
+59 silly registry.get     'x-timer': 'S1468355348.881813,VS0,VE0',
+59 silly registry.get     vary: 'Accept-Encoding' } ]
+60 verbose etag karma-jasmine from cache
+61 http 304 https://registry.npmjs.org/jasmine
+62 silly registry.get cb [ 304,
+62 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:08 GMT',
+62 silly registry.get     via: '1.1 varnish',
+62 silly registry.get     'cache-control': 'max-age=300',
+62 silly registry.get     etag: '"226GLD8L8DVIBHNNKR0FAJ2BP"',
+62 silly registry.get     age: '252',
+62 silly registry.get     connection: 'close',
+62 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+62 silly registry.get     'x-cache': 'HIT',
+62 silly registry.get     'x-cache-hits': '1',
+62 silly registry.get     'x-timer': 'S1468355348.881629,VS0,VE0',
+62 silly registry.get     vary: 'Accept-Encoding' } ]
+63 verbose etag jasmine from cache
+64 http 304 https://registry.npmjs.org/angular
+65 silly registry.get cb [ 304,
+65 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:08 GMT',
+65 silly registry.get     via: '1.1 varnish',
+65 silly registry.get     'cache-control': 'max-age=300',
+65 silly registry.get     etag: '"3QT1K6SEJMB71P2B1MQO0CKGB"',
+65 silly registry.get     age: '297',
+65 silly registry.get     connection: 'close',
+65 silly registry.get     'x-served-by': 'cache-lcy1129-LCY',
+65 silly registry.get     'x-cache': 'HIT',
+65 silly registry.get     'x-cache-hits': '2',
+65 silly registry.get     'x-timer': 'S1468355348.883260,VS0,VE0',
+65 silly registry.get     vary: 'Accept-Encoding' } ]
+66 verbose etag angular from cache
+67 http 304 https://registry.npmjs.org/express
+68 silly registry.get cb [ 304,
+68 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+68 silly registry.get     via: '1.1 varnish',
+68 silly registry.get     'cache-control': 'max-age=300',
+68 silly registry.get     etag: '"CNMW77J5L9JM8ZMTXDPQNI43Q"',
+68 silly registry.get     age: '25',
+68 silly registry.get     connection: 'close',
+68 silly registry.get     'x-served-by': 'cache-lcy1127-LCY',
+68 silly registry.get     'x-cache': 'HIT',
+68 silly registry.get     'x-cache-hits': '1',
+68 silly registry.get     'x-timer': 'S1468355349.001686,VS0,VE0',
+68 silly registry.get     vary: 'Accept-Encoding' } ]
+69 verbose etag express from cache
+70 http 304 https://registry.npmjs.org/karma-chrome-launcher
+71 silly registry.get cb [ 304,
+71 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+71 silly registry.get     via: '1.1 varnish',
+71 silly registry.get     'cache-control': 'max-age=300',
+71 silly registry.get     etag: '"DOZUX38YGKISCAN9WX7OX1SAU"',
+71 silly registry.get     age: '43',
+71 silly registry.get     connection: 'close',
+71 silly registry.get     'x-served-by': 'cache-lcy1126-LCY',
+71 silly registry.get     'x-cache': 'HIT',
+71 silly registry.get     'x-cache-hits': '3',
+71 silly registry.get     'x-timer': 'S1468355349.015229,VS0,VE0',
+71 silly registry.get     vary: 'Accept-Encoding' } ]
+72 verbose etag karma-chrome-launcher from cache
+73 http 304 https://registry.npmjs.org/karma
+74 silly registry.get cb [ 304,
+74 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+74 silly registry.get     via: '1.1 varnish',
+74 silly registry.get     'cache-control': 'max-age=300',
+74 silly registry.get     etag: '"OIR0RAWADG0VV1YPUKELUFYF"',
+74 silly registry.get     age: '43',
+74 silly registry.get     connection: 'close',
+74 silly registry.get     'x-served-by': 'cache-lcy1125-LCY',
+74 silly registry.get     'x-cache': 'HIT',
+74 silly registry.get     'x-cache-hits': '1',
+74 silly registry.get     'x-timer': 'S1468355349.037912,VS0,VE0',
+74 silly registry.get     vary: 'Accept-Encoding' } ]
+75 verbose etag karma from cache
+76 http 304 https://registry.npmjs.org/bootstrap
+77 silly registry.get cb [ 304,
+77 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+77 silly registry.get     via: '1.1 varnish',
+77 silly registry.get     'cache-control': 'max-age=300',
+77 silly registry.get     etag: '"5K8L3AUR83IZHYZWB9BVVANDA"',
+77 silly registry.get     age: '111',
+77 silly registry.get     connection: 'close',
+77 silly registry.get     'x-served-by': 'cache-lcy1132-LCY',
+77 silly registry.get     'x-cache': 'HIT',
+77 silly registry.get     'x-cache-hits': '2',
+77 silly registry.get     'x-timer': 'S1468355349.038820,VS0,VE0',
+77 silly registry.get     vary: 'Accept-Encoding' } ]
+78 verbose etag bootstrap from cache
+79 http 304 https://registry.npmjs.org/angular-mocks
+80 silly registry.get cb [ 304,
+80 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+80 silly registry.get     via: '1.1 varnish',
+80 silly registry.get     'cache-control': 'max-age=300',
+80 silly registry.get     etag: '"65QJBJ9KDK9RJMRBL23FLC80B"',
+80 silly registry.get     age: '43',
+80 silly registry.get     connection: 'close',
+80 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+80 silly registry.get     'x-cache': 'HIT',
+80 silly registry.get     'x-cache-hits': '1',
+80 silly registry.get     'x-timer': 'S1468355349.051618,VS0,VE0',
+80 silly registry.get     vary: 'Accept-Encoding' } ]
+81 verbose etag angular-mocks from cache
+82 http 304 https://registry.npmjs.org/angular-ui-router
+83 silly registry.get cb [ 304,
+83 silly registry.get   { date: 'Tue, 12 Jul 2016 20:29:09 GMT',
+83 silly registry.get     via: '1.1 varnish',
+83 silly registry.get     'cache-control': 'max-age=300',
+83 silly registry.get     etag: '"C77COF9P0WECWYGGPFWSQO6DE"',
+83 silly registry.get     age: '291',
+83 silly registry.get     connection: 'close',
+83 silly registry.get     'x-served-by': 'cache-lcy1120-LCY',
+83 silly registry.get     'x-cache': 'HIT',
+83 silly registry.get     'x-cache-hits': '2',
+83 silly registry.get     'x-timer': 'S1468355349.066061,VS0,VE0',
+83 silly registry.get     vary: 'Accept-Encoding' } ]
+84 verbose etag angular-ui-router from cache
+85 verbose cache add [ 'bootstrap', '^2.2.4' ]
+86 verbose cache add name="bootstrap" spec="^2.2.4" args=["bootstrap","^2.2.4"]
+87 verbose parsed url Url {
+87 verbose parsed url   protocol: null,
+87 verbose parsed url   slashes: null,
+87 verbose parsed url   auth: null,
+87 verbose parsed url   host: null,
+87 verbose parsed url   port: null,
+87 verbose parsed url   hostname: null,
+87 verbose parsed url   hash: null,
+87 verbose parsed url   search: null,
+87 verbose parsed url   query: null,
+87 verbose parsed url   pathname: '%5E2.2.4',
+87 verbose parsed url   path: '%5E2.2.4',
+87 verbose parsed url   href: '%5E2.2.4' }
+88 verbose addNamed [ 'bootstrap', '^2.2.4' ]
+89 verbose addNamed [ null, '>=2.2.4-0 <3.0.0-0' ]
+90 silly lockFile b930b932-bootstrap-2-2-4 bootstrap@^2.2.4
+91 verbose lock bootstrap@^2.2.4 C:\Users\c722895\AppData\Roaming\npm-cache\b930b932-bootstrap-2-2-4.lock
+92 silly addNameRange { name: 'bootstrap',
+92 silly addNameRange   range: '>=2.2.4-0 <3.0.0-0',
+92 silly addNameRange   hasData: false }
+93 verbose registry.get bootstrap not expired, no request
+94 silly addNameRange number 2 { name: 'bootstrap', range: '>=2.2.4-0 <3.0.0-0', hasData: true }
+95 silly addNameRange versions [ 'bootstrap',
+95 silly addNameRange   [ '0.0.1',
+95 silly addNameRange     '0.0.2',
+95 silly addNameRange     '3.1.1',
+95 silly addNameRange     '3.2.0',
+95 silly addNameRange     '3.3.0',
+95 silly addNameRange     '3.3.1',
+95 silly addNameRange     '3.3.2',
+95 silly addNameRange     '3.3.4',
+95 silly addNameRange     '3.3.5',
+95 silly addNameRange     '3.3.6',
+95 silly addNameRange     '4.0.0-alpha.2' ] ]
+96 silly lockFile b930b932-bootstrap-2-2-4 bootstrap@^2.2.4
+97 silly lockFile b930b932-bootstrap-2-2-4 bootstrap@^2.2.4
+98 info outdated updating [ [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'angular',
+98 info outdated     undefined,
+98 info outdated     '1.5.7',
+98 info outdated     '1.5.7',
+98 info outdated     '^1.5.7' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'express',
+98 info outdated     undefined,
+98 info outdated     '4.9.8',
+98 info outdated     '4.14.0',
+98 info outdated     '~4.9.0' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'jasmine',
+98 info outdated     undefined,
+98 info outdated     '2.4.1',
+98 info outdated     '2.4.1',
+98 info outdated     '^2.4.1' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'karma',
+98 info outdated     undefined,
+98 info outdated     '1.1.1',
+98 info outdated     '1.1.1',
+98 info outdated     '^1.1.1' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'angular-mocks',
+98 info outdated     undefined,
+98 info outdated     '1.5.7',
+98 info outdated     '1.5.7',
+98 info outdated     '^1.5.7' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'karma-chrome-launcher',
+98 info outdated     undefined,
+98 info outdated     '1.0.1',
+98 info outdated     '1.0.1',
+98 info outdated     '^1.0.1' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'angular-ui-router',
+98 info outdated     undefined,
+98 info outdated     '0.3.1',
+98 info outdated     '0.3.1',
+98 info outdated     '^0.3.1' ],
+98 info outdated   [ 'C:\\Users\\c722895\\Documents\\GitHub\\tangent_assessment\\tangent-assessment',
+98 info outdated     'karma-jasmine',
+98 info outdated     undefined,
+98 info outdated     '1.0.2',
+98 info outdated     '1.0.2',
+98 info outdated     '^1.0.2' ] ]
+99 error notarget No compatible version found: bootstrap@'>=2.2.4-0 <3.0.0-0'
+99 error notarget Valid install targets:
+99 error notarget ["0.0.1","0.0.2","3.1.1","3.2.0","3.3.0","3.3.1","3.3.2","3.3.4","3.3.5","3.3.6","4.0.0-alpha.2"]
+99 error notarget
+99 error notarget This is most likely not a problem with npm itself.
+99 error notarget In most cases you or one of your dependencies are requesting
+99 error notarget a package version that doesn't exist.
+100 error System Windows_NT 6.1.7601
+101 error command "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "update"
+102 error cwd C:\Users\c722895\Documents\GitHub\tangent_assessment\tangent-assessment
+103 error node -v v6.2.0
+104 error npm -v 1.4.9
+105 error code ETARGET
+106 verbose exit [ 1, true ]
