@@ -52,7 +52,23 @@ describe('Pivotal-angular', function(){
     });
 
     it('should be able to determine categories', function(){
-      
+
+      var data = [
+        {current_state: 'unstarted'},
+        {current_state: 'started'},
+        {current_state: 'finished'},
+        {current_state: 'accepted'}
+      ];
+      createController();
+      $scope.determineCategories(data);
+      expect($scope.categories.planned).not.toBe(undefined);
+      expect($scope.categories.inProgress).not.toBe(undefined);
+      expect($scope.categories.test).not.toBe(undefined);
+      expect($scope.categories.done).not.toBe(undefined);
+      expect($scope.categories.planned[0]).toBe(data[0]);
+      expect($scope.categories.inProgress[0]).toBe(data[1]);
+      expect($scope.categories.test[0]).toBe(data[2]);
+      expect($scope.categories.done[0]).toBe(data[3]);
     });
 
 });
