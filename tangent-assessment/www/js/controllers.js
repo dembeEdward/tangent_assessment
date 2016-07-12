@@ -12,8 +12,6 @@ app.controller('homeCtrl', function($scope, currentIteration){
   $scope.categories.test = [];
   $scope.categories.done = [];
   $scope.showError = false;
-  $scope.show404 = false;
-  $scope.error = null;
 
   var showModal = function(){
     $('#loadingModal').modal('show');
@@ -63,8 +61,7 @@ app.controller('homeCtrl', function($scope, currentIteration){
   })
   //handle error 404
   .catch(function(){
-    //$scope.show404 = true;
-    //$scope.error = error;
+    $scope.showError = true;
   });
 
 });
