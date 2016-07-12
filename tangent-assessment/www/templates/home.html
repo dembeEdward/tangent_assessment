@@ -6,7 +6,7 @@
 <div class="container">
   <ul class="list-group">
     <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#plannedCollapse">
-      <span class="badge">{{planned.length}}</span>
+      <span class="badge">{{categories.planned.length}}</span>
       <span class="glyphicon glyphicon-triangle-bottom glyphicon-align-left"></span>
       Planned
     </li>
@@ -19,7 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="plan in planned">
+          <tr ng-repeat="plan in categories.planned">
             <td>{{$index + 1}}</td>
             <td>{{plan.name}}</td>
           </tr>
@@ -28,7 +28,7 @@
     </div>
 
     <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#inProgressCollapse">
-      <span class="badge">{{inProgress.length}}</span>
+      <span class="badge">{{categories.inProgress.length}}</span>
       <span class="glyphicon glyphicon-triangle-bottom glyphicon-align-left"></span>
       In Progress
     </li>
@@ -41,7 +41,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="progress in inProgress">
+          <tr ng-repeat="progress in categories.inProgress">
             <td>{{$index + 1}}</td>
             <td>{{progress.name}}</td>
           </tr>
@@ -50,7 +50,7 @@
     </div>
 
     <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#testCollapse">
-      <span class="badge">{{test.length}}</span>
+      <span class="badge">{{categories.test.length}}</span>
       <span class="glyphicon glyphicon-triangle-bottom glyphicon-align-left"></span>
       Test
     </li>
@@ -63,7 +63,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="testing in test">
+          <tr ng-repeat="testing in categories.test">
             <td>{{$index + 1}}</td>
             <td>{{testing.name}}</td>
           </tr>
@@ -72,7 +72,7 @@
     </div>
 
     <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#finishCollapse">
-      <span class="badge">{{done.length}}</span>
+      <span class="badge">{{categories.done.length}}</span>
       <span class="glyphicon glyphicon-triangle-bottom glyphicon-align-left"></span>
       Done
     </li>
@@ -85,7 +85,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="finish in done">
+          <tr ng-repeat="finish in categories.done">
             <td>{{$index + 1}}</td>
             <td>{{finish.name}}</td>
           </tr>
@@ -94,9 +94,7 @@
     </div>
   </ul>
   <!-- error -->
-  <div class="alert alert-warning" role="alert" ng-show="showError"><b>Sorry!</b> Can not get the current iteration right now. Please try again later.</div>
-  <!-- 404 -->
-  <div class="alert alert-warning" role="alert" ng-show="show404"><b>404!</b> {{error}}</div>
+  <div class="alert alert-warning" role="alert" ng-show="showError"><b>Sorry!</b>{{error}}</div>
   <!--loading modal -->
   <div class="modal fade" tabindex="-1" role="dialog" id="loadingModal">
   <div class="modal-dialog">
