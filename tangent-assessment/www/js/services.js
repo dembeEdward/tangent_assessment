@@ -1,19 +1,16 @@
 var app = angular.module('services', []);
 
-app.service('currentIteration', function($http){
+app.service('currentIteration', function($q, $http){
   //get current Iteration
   this.getCurrentIteration = function(scope){
+    //use promise for request
+    var deferred = $q.defer();
 
-    return $http.get('https://www.pivotaltracker.com/services/v5/projects/442903/iterations?scope=' + scope).then(function(response){
-
-      if(response.status == 200){
-        return response.data[0];
-      }else{
-        return [];
-      }
-    }).catch(function(error){
-
-      return error;
+    return $http.get('https://www.pivotaltracker.com/services/v5/projects/442903/iterations?scope=' + scope).success(function(response){
+      deferred.resolve(response);
+    }).error(function(){
+      deferred.reject();
     });
+    return deferred.promise;
   };
 });

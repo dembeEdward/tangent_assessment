@@ -6,10 +6,11 @@ app.controller('homeCtrl', function($scope, currentIteration){
 
   var iterationScope = "current";
   var iteration = null;
-  $scope.planned = [];
-  $scope.inProgress = [];
-  $scope.test = [];
-  $scope.done = [];
+  $scope.categories = {};
+  $scope.categories.planned = [];
+  $scope.categories.inProgress = [];
+  $scope.categories.test = [];
+  $scope.categories.done = [];
   $scope.showError = false;
   $scope.show404 = false;
   $scope.error = null;
@@ -21,40 +22,49 @@ app.controller('homeCtrl', function($scope, currentIteration){
   var hideModal = function(){
     $('#loadingModal').modal('hide')
   };
-  //get the current iteration
-  currentIteration.getCurrentIteration(iterationScope).then(function(iterationData){
-      //load modal
-      showModal();
-      iteration = iterationData;
-      //group the iteration stories into categories
-      if(iteration.stories.length > 0){
-        //set iterationNumber
-        $scope.iterationNumber = iteration.number;
 
-        for(var x=0; x<iteration.stories.length; x++){
-          if(iteration.stories[x].current_state == "unstarted"){
-            $scope.planned.push(iteration.stories[x]);
-          }else if(iteration.stories[x].current_state == "started"){
-            $scope.inProgress.push(iteration.stories[x]);
-          }else if(iteration.stories[x].current_state == "finished"){
-            $scope.test.push(iteration.stories[x]);
-          }else if(iteration.stories[x].current_state == "accepted"){
-            $scope.done.push(iteration.stories[x]);
-          }
+  var determineCategories = function(stories){
+
+    if(stories.length > 0){
+
+      for(var x=0; x<stories.length; x++){
+        if(stories[x].current_state == "unstarted"){
+          $scope.categories.planned.push(stories[x]);
+        }else if(stories[x].current_state == "started"){
+          $scope.categories.inProgress.push(stories[x]);
+        }else if(stories[x].current_state == "finished"){
+          $scope.categories.test.push(stories[x]);
+        }else if(stories[x].current_state == "accepted"){
+          $scope.categories.done.push(stories[x]);
         }
       }
-      //handle status that is not 200
-      if(iteration == []){
-        $scope.showError = true;
-      }
+    }
+  };
 
+  var setIterationNumber = function(number){
+    $scope.iterationNumber = number;
+  };
+
+  var setIteration= function(data){
+    iteration = data;
+  };
+  //show modal
+  showModal();
+  //get the current iteration
+  currentIteration.getCurrentIteration(iterationScope).then(function(iterationData){
+      //set Iteration
+      setIteration(iterationData.data[0]);
+      //set iterationNumber
+      setIterationNumber(iteration.number);
+      //group the iteration stories into categories
+      determineCategories(iteration.stories);
       //hide modal when data is loaded
       hideModal();
   })
   //handle error 404
-  .catch(function(error){
-    $scope.show404 = true;
-    $scope.error = error;
+  .catch(function(){
+    //$scope.show404 = true;
+    //$scope.error = error;
   });
 
 });
