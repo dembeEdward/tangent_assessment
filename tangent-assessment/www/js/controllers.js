@@ -2,8 +2,7 @@ var app = angular.module('controllers', []);
 //home state controller
 app.controller('homeCtrl', function($scope, currentIteration){
 
-  //load modal
-  $('#loadingModal').modal('show');
+
 
   var iterationScope = "current";
   var iteration = null;
@@ -14,13 +13,20 @@ app.controller('homeCtrl', function($scope, currentIteration){
   $scope.showError = false;
   $scope.show404 = false;
   $scope.error = null;
+
+  var showModal = function(){
+    $('#loadingModal').modal('show');
+  }
+
+  var hideModal = function(){
+    $('#loadingModal').modal('hide')
+  };
   //get the current iteration
   currentIteration.getCurrentIteration(iterationScope).then(function(iterationData){
-
+      //load modal
+      showModal();
       iteration = iterationData;
-      //console.log(iteration);
       //group the iteration stories into categories
-    //console.log(iteration.stories);
       if(iteration.stories.length > 0){
         //set iterationNumber
         $scope.iterationNumber = iteration.number;
@@ -43,7 +49,7 @@ app.controller('homeCtrl', function($scope, currentIteration){
       }
 
       //hide modal when data is loaded
-      $('#loadingModal').modal('hide')
+      hideModal();
   })
   //handle error 404
   .catch(function(error){
