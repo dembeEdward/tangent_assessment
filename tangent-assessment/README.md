@@ -6,4 +6,5 @@ In order to run Pivotal-angular :
 2. npm install
 3. Then Run "node server.js"
 4. Open browser and go to localhost:3000
-5. For unit tests run "npm test" in cmd
+5. Run "npm install -g karma-cli" - in order to run test (using karma and Jasmine)
+6. For unit tests run "npm test" in cmd
